@@ -10,6 +10,7 @@ import Jellyfish from './FlyingJellyfish.js';
 import Penguin from './EnemyPenguin.js';
 import PlayerIce from './PlayerIce.js';
 import NarwhalBoss from './NarwhalBoss.js';
+import Background from './Background.js';
 
 // Define the GameSetup object literal
 const assets = {  
@@ -117,11 +118,12 @@ const assets = {
     castles: { src: "/images/platformer/backgrounds/castles.png" },
     winter: { src: "/images/platformer/backgrounds/winter.png", parallaxSpeed: 0.4, moveOnKeyAction: true },
     snow: { src: "/images/platformer/backgrounds/snowfall.png" },
-    icewater: { src: "/images/platformer/backgrounds/icewater.png", parallaxSpeed: 0.4, moveOnKeyAction: true },
-    narwhal: { src: "/images/platformer/backgrounds/narwhal.png", parallaxSpeed: 0.25 },
+    icewater: { src: "/images/platformer/backgrounds/icewater.png" },
+    cloud: { src: "/images/platformer/backgrounds/cloud.png", parallaxSpeed: 0.25 },
     mini: { src: "/images/platformer/backgrounds/mini.png" },
     devil: {src: "/images/platformer/backgrounds/devil.png", parallaxSpeed: 2 },
     snowfalling: {src: "/images/platformer/backgrounds/snowfalling.png", parallaxSpeed: 2 },
+    mountain: { src: "/images/platformer/backgrounds/mountain.png" },
   },
   transitions: {
     loading: { src: "/images/platformer/transitions/greenscreen.png" },
@@ -444,9 +446,10 @@ const assets = {
   // Hills Game Level defintion...
   const objects = [
     // GameObject(s), the order is important to z-index...
-    { name: 'icewater', id: 'background', class: BackgroundParallax, data: assets.backgrounds.icewater },
+    { name: 'icewater', id: 'background', class: Background, data: assets.backgrounds.icewater },
+    { name: 'mountain', id: 'background', class: Background, data: assets.backgrounds.mountain },
     { name: 'snowfalling', id: 'background', class: BackgroundParallax, data: assets.backgrounds.snowfalling },
-    { name: 'narwhal', id: 'background', class: BackgroundParallax, data: assets.backgrounds.narwhal },
+    { name: 'cloud', id: 'background', class: BackgroundParallax, data: assets.backgrounds.cloud },
     { name: 'narwhalfloor', id: 'platform', class: Platform, data: assets.platforms.narwhalfloor },
     { name: 'sandstone', id: 'jumpPlatform', class: BlockPlatform, data: assets.platforms.snowywood, xPercentage: 0.2, yPercentage: 0.82 },
     { name: 'blocks', id: 'jumpPlatform', class: BlockPlatform, data: assets.platforms.snowywood, xPercentage: 0.2368, yPercentage: 0.82 },
