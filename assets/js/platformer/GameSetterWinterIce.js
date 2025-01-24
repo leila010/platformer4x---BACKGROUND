@@ -117,10 +117,11 @@ const assets = {
     castles: { src: "/images/platformer/backgrounds/castles.png" },
     winter: { src: "/images/platformer/backgrounds/winter.png", parallaxSpeed: 0.4, moveOnKeyAction: true },
     snow: { src: "/images/platformer/backgrounds/snowfall.png" },
-    icewater: { src: "/images/platformer/backgrounds/icewater.png", parallaxSpeed: 0.4, moveOnKeyAction: true},
-    narwhal: { src: "/images/platformer/backgrounds/narwhal.png", parallaxSpeed: 2 },
+    icewater: { src: "/images/platformer/backgrounds/icewater.png", parallaxSpeed: 0.4, moveOnKeyAction: true },
+    narwhal: { src: "/images/platformer/backgrounds/narwhal.png", parallaxSpeed: 0.25 },
     mini: { src: "/images/platformer/backgrounds/mini.png" },
     devil: {src: "/images/platformer/backgrounds/devil.png", parallaxSpeed: 2 },
+    snowfalling: {src: "/images/platformer/backgrounds/snowfalling.png", parallaxSpeed: 2 },
   },
   transitions: {
     loading: { src: "/images/platformer/transitions/greenscreen.png" },
@@ -444,6 +445,7 @@ const assets = {
   const objects = [
     // GameObject(s), the order is important to z-index...
     { name: 'icewater', id: 'background', class: BackgroundParallax, data: assets.backgrounds.icewater },
+    { name: 'snowfalling', id: 'background', class: BackgroundParallax, data: assets.backgrounds.snowfalling },
     { name: 'narwhal', id: 'background', class: BackgroundParallax, data: assets.backgrounds.narwhal },
     { name: 'narwhalfloor', id: 'platform', class: Platform, data: assets.platforms.narwhalfloor },
     { name: 'sandstone', id: 'jumpPlatform', class: BlockPlatform, data: assets.platforms.snowywood, xPercentage: 0.2, yPercentage: 0.82 },
